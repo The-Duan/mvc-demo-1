@@ -1,10 +1,11 @@
-import $ from 'jquery'
-import './app4.css'
+import $ from "jquery";
+import "./app4.css";
+
 
 const $circle = $('#app4 .circle')
 
-$circle.on('mouseenter', () => {
+$circle.on('mouseenter', ()=>{
     $circle.addClass('active')
-}).on('mouseenter', () => {
+}).on('mouseleave', ()=>{
     $circle.removeClass('active')
 })

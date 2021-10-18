@@ -11253,46 +11253,46 @@ return jQuery;
 } );
 
 },{"process":"..\\..\\..\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\process\\browser.js"}],"app1.js":[function(require,module,exports) {
-'use strict';
+"use strict";
 
-require('./app1.css');
+require("./app1.css");
 
-var _jquery = require('jquery');
+var _jquery = require("jquery");
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $button1 = (0, _jquery2.default)('#add1');
-var $button2 = (0, _jquery2.default)('#minus1');
-var $button3 = (0, _jquery2.default)('#mul2');
-var $button4 = (0, _jquery2.default)('#divide2');
-var $number = (0, _jquery2.default)('#number');
-var n = localStorage.getItem('n');
+var $button1 = (0, _jquery2.default)("#add1");
+var $button2 = (0, _jquery2.default)("#minus1");
+var $button3 = (0, _jquery2.default)("#mul2");
+var $button4 = (0, _jquery2.default)("#divide2");
+var $number = (0, _jquery2.default)("#number");
+var n = localStorage.getItem("n");
 $number.text(n || 100);
 
-$button1.on('click', function () {
+$button1.on("click", function () {
     var n = parseInt($number.text());
     n += 1;
-    localStorage.setItem('n', n);
+    localStorage.setItem("n", n);
     $number.text(n);
 });
-$button2.on('click', function () {
+$button2.on("click", function () {
     var n = parseInt($number.text());
     n -= 1;
-    localStorage.setItem('n', n);
+    localStorage.setItem("n", n);
     $number.text(n);
 });
-$button3.on('click', function () {
+$button3.on("click", function () {
     var n = parseInt($number.text());
     n *= 2;
-    localStorage.setItem('n', n);
+    localStorage.setItem("n", n);
     $number.text(n);
 });
-$button4.on('click', function () {
+$button4.on("click", function () {
     var n = parseInt($number.text());
     n /= 2;
-    localStorage.setItem('n', n);
+    localStorage.setItem("n", n);
     $number.text(n);
 });
 },{"./app1.css":"app1.css","jquery":"..\\node_modules\\jquery\\dist\\jquery.js"}],"app2.css":[function(require,module,exports) {
@@ -11302,6 +11302,8 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"..\\..\\..\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\css-loader.js"}],"app2.js":[function(require,module,exports) {
 "use strict";
+
+require("./app2.css");
 
 var _jquery = require("jquery");
 
@@ -11320,7 +11322,7 @@ $tabBar.on("click", "li", function (e) {
 });
 
 $tabBar.children().eq(0).trigger('click');
-},{"jquery":"..\\node_modules\\jquery\\dist\\jquery.js"}],"app3.css":[function(require,module,exports) {
+},{"./app2.css":"app2.css","jquery":"..\\node_modules\\jquery\\dist\\jquery.js"}],"app3.css":[function(require,module,exports) {
 
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
@@ -11347,13 +11349,13 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"..\\..\\..\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\css-loader.js"}],"app4.js":[function(require,module,exports) {
-'use strict';
+"use strict";
 
-var _jquery = require('jquery');
+var _jquery = require("jquery");
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-require('./app4.css');
+require("./app4.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11361,26 +11363,24 @@ var $circle = (0, _jquery2.default)('#app4 .circle');
 
 $circle.on('mouseenter', function () {
     $circle.addClass('active');
-}).on('mouseenter', function () {
+}).on('mouseleave', function () {
     $circle.removeClass('active');
 });
 },{"jquery":"..\\node_modules\\jquery\\dist\\jquery.js","./app4.css":"app4.css"}],"main.js":[function(require,module,exports) {
-'use strict';
+"use strict";
 
-require('./reset.css');
+require("./reset.css");
 
-require('./global.css');
+require("./global.css");
 
-require('./app1.js');
+require("./app1.js");
 
-require('./app2.css');
+require("./app2.js");
 
-require('./app2.js');
+require("./app3.js");
 
-require('./app3.js');
-
-require('./app4.js');
-},{"./reset.css":"reset.css","./global.css":"global.css","./app1.js":"app1.js","./app2.css":"app2.css","./app2.js":"app2.js","./app3.js":"app3.js","./app4.js":"app4.js"}],"..\\..\\..\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+require("./app4.js");
+},{"./reset.css":"reset.css","./global.css":"global.css","./app1.js":"app1.js","./app2.js":"app2.js","./app3.js":"app3.js","./app4.js":"app4.js"}],"..\\..\\..\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -11409,7 +11409,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60730' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58958' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
